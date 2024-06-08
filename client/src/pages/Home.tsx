@@ -58,7 +58,6 @@ const Home: React.FC = () => {
         Toast.Success('Copied to Clipboard')
     }
 
-    
     return (
         <div className="w-full min-h-[60vh]">
             <div className="w-[50%] h-full m-auto flex flex-col justify-center items-center">
