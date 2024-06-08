@@ -6,6 +6,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Toast from '../components/Toast'
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 const Home: React.FC = () => {
     const [longUrl, setLongUrl] = useState<string>('')
@@ -26,7 +28,7 @@ const Home: React.FC = () => {
             return
         }
         setLoading(true)
-        await axios.post('http://localhost:3000/', { longUrl: longUrl })
+        await axios.post(API_URL, { longUrl: longUrl })
             .then(res => {
                 console.log(res.data)
                 if (res.data.message === "short url created") {
