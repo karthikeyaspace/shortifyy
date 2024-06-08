@@ -57,6 +57,7 @@ const Home: React.FC = () => {
         navigator.clipboard.writeText(link)
         Toast.Success('Copied to Clipboard')
     }
+    
 
     return (
         <div className="w-full min-h-[60vh]">
