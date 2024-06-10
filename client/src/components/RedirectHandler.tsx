@@ -31,6 +31,7 @@ const RedirectHandler: React.FC = () => {
         }
     }, [alias, navigate]);
 
+    console.log(url)
 
     return (
         <div className='z-50 absolute w-screen h-screen bg-black'></div>
