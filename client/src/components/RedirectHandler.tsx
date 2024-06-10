@@ -8,13 +8,16 @@ const RedirectHandler: React.FC = () => {
    const {alias} = useParams<{alias: string}>()
     const navigate = useNavigate();
     const [url, setUrl] = useState<string>('')
+    console.log(alias)
     useEffect(() => {
         if (alias) {
             const redirectToLongUrl = async () => {
                 try{
                     const response = await axios.get(`${API_URL}${alias}`)
+                    
                     if(response.data.message === 'redirecting'){
                         setUrl(response.data.payload.longUrl)
+                        
                         window.location.href = response.data.payload.longUrl
                     }
                     else {
@@ -30,9 +33,7 @@ const RedirectHandler: React.FC = () => {
     }, [alias, navigate]);
 
     return (
-        <div className='h-full w-full flex flex-row justify-center items-center'>
-            <h1 className='text-3xl'>Redirecting to {url}</h1>
-        </div>
+        <div className='z-50 absolute w-screen h-screen bg-black'></div>
     ); 
 };
 
