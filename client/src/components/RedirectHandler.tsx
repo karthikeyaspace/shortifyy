@@ -17,20 +17,20 @@ const RedirectHandler: React.FC = () => {
                     
                     if(response.data.message === 'redirecting'){
                         setUrl(response.data.payload.longUrl)
-                        
                         window.location.href = response.data.payload.longUrl
                     }
                     else {
-                        window.location.href = '/notfound?url='+alias
+                        window.location.href = '/?url='+alias
                     }
                 }
                 catch(err){
-                    window.location.href = '/notfound?url='+alias
+                    window.location.href = '/?url='+alias
                 }
             };
             redirectToLongUrl();
         }
     }, [alias, navigate]);
+
 
     return (
         <div className='z-50 absolute w-screen h-screen bg-black'></div>

@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { FaClipboard } from 'react-icons/fa'
 import { IoMdClose } from "react-icons/io";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Toast from '../components/Toast'
+import { useLocation } from 'react-router-dom';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -13,7 +14,15 @@ const Home: React.FC = () => {
     const [longUrl, setLongUrl] = useState<string>('')
     const [shortLink, setShortLink] = useState<string>('')
     const [loading, setLoading] = useState<boolean>(false)
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const url = queryParams.get('url');
 
+    useEffect(() => {
+        if (url)
+            Toast.Info('Nothing Found');
+    }
+    , [url])
 
     const handleLongLink = (e: React.ChangeEvent<HTMLInputElement>) => {
         setShortLink('')
