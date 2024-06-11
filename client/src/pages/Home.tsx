@@ -12,7 +12,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 const Home: React.FC = () => {
     const [longUrl, setLongUrl] = useState<string>('')
-    const [shortLink, setShortLink] = useState<string>('https://shortifyy.vercel.app/afsed')
+    const [shortLink, setShortLink] = useState<string>('')
     const [loading, setLoading] = useState<boolean>(false)
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
