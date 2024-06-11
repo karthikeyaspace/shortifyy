@@ -89,7 +89,7 @@ const Home: React.FC = () => {
                             type='submit'
                             disabled={loading}
                         >
-                            {loading ? <AiOutlineLoading3Quarters className='animate-spin' size={20} /> : 'Shortn'}
+                            {loading ? <AiOutlineLoading3Quarters className='animate-spin' size={20} color='black' /> : 'Shortn'}
                         </button>
                     </div>
                 </form>
