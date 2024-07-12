@@ -49,14 +49,16 @@ const Home: React.FC = () => {
         if (res.data.message === "short url created") {
           Toast.Success("Short Link created");
           setShortLink(res.data.payload.shortUrl);
-        } else if (res.data.message === "url already exists") {
+        } 
+        else if (res.data.message === "url already exists") {
           Toast.Success("Short Link already exists");
           setShortLink(res.data.payload.shortUrl);
-        } else if (res.data.message === "invalid url") {
+        } 
+        else if (res.data.message === "invalid url") 
           Toast.Error("Please Enter a Valid Url");
-        } else {
+        else 
           Toast.Error("Something went wrong");
-        }
+        
       })
       .catch((err) => {
         console.log(err);
