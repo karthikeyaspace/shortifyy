@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from './pages/Navbar';
-import Home from './pages/Home';
-import RedirectHandler from './components/RedirectHandler';
-import { Toaster } from 'react-hot-toast';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Navbar from './pages/Navbar';
+// import Home from './pages/Home';
+// import RedirectHandler from './components/RedirectHandler';
+// import { Toaster } from 'react-hot-toast';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
