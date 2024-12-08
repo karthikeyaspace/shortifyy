@@ -5,7 +5,7 @@ import RedirectHandler from "./components/RedirectHandler";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-export const API_URL = "http://localhost:3000/";
+export const API_URL = "https://api.itskv.me/";
 
 const App: React.FC = () => {
   return (
